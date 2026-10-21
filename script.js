@@ -29,6 +29,40 @@ document.addEventListener('visibilitychange', () => {
 
 });
 
+const projects = [
+    {
+        name: "Central Illinois Construct",
+        image: "assets/images/central-illinois-construct.webp",
+        url: "https://cicontractor.com/"
+    },
+    {
+        name: "Sunset Metal Roofing",
+        image: "assets/images/sunset-metal-roofing.webp",
+        url: "https://www.sunsetmetalroofing.com/"
+    },
+    {
+        name: "R.D. Davis Heating",
+        image: "assets/images/rd-davis-heating.webp",
+        url: "https://rddavisheating.com/"
+    },
+    {
+        name: "Farmington Road Storage",
+        image: "assets/images/farmington-road-storage.webp",
+        url: "https://farmingtonroadstorage.com/"
+    },
+    {
+        name: "Everything Water Plumbing",
+        image: "assets/images/everything-water-plumbing.webp",
+        url: "https://everythingwaterplumbing.com/"
+    },
+    {
+        name: "Mark Hoerr Landscaping",
+        image: "assets/images/mark-hoerr-landscaping.webp",
+        url: "https://markhoerrlandscaping.com/"
+    }
+];
+
+
 const projectsGrid = document.getElementById("projects-grid");
 
 projects.forEach(project => {
