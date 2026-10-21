@@ -17,18 +17,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 
-// Update the page title when the tab becomes hidden
-
-document.addEventListener('visibilitychange', () => {
-
-    if (document.hidden) {
-        document.title = 'Come back 👋 | Harsh Patel';
-    } else {
-        document.title = 'Harsh Patel | WordPress Backend Developer';
-    }
-
-});
-
 const projects = [
     {
         name: "Central Illinois Construct",
@@ -62,7 +50,6 @@ const projects = [
     }
 ];
 
-
 const projectsGrid = document.getElementById("projects-grid");
 
 projects.forEach(project => {
@@ -72,8 +59,8 @@ projects.forEach(project => {
     article.className = "project";
 
     article.innerHTML = `
-        <a href="${project.url}" 
-           target="_blank" 
+        <a href="${project.url}"
+           target="_blank"
            rel="noopener noreferrer"
            class="project-image">
 
