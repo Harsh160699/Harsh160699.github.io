@@ -129,5 +129,4 @@ function updateLoadMoreButton() {
 
 // Initial 9 projects
 loadProjects();
-    projectsGrid.appendChild(article);
-});
+    
