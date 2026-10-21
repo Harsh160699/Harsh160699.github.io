@@ -28,3 +28,31 @@ document.addEventListener('visibilitychange', () => {
     }
 
 });
+
+const projectsGrid = document.getElementById("projects-grid");
+
+projects.forEach(project => {
+
+    const article = document.createElement("article");
+
+    article.className = "project";
+
+    article.innerHTML = `
+        <a href="${project.url}" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="project-image">
+
+            <img src="${project.image}" alt="${project.name} website">
+
+            <div class="project-overlay">
+                <span>VIEW SITE ↗</span>
+            </div>
+
+        </a>
+
+        <h3>${project.name}</h3>
+    `;
+
+    projectsGrid.appendChild(article);
+});
