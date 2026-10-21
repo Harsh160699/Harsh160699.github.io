@@ -52,7 +52,12 @@ const projects = [
 
 const projectsGrid = document.getElementById("projects-grid");
 
-projects.forEach(project => {
+const projectsPerLoad = 9;
+let visibleProjects = 0;
+
+
+// Create project card
+function createProject(project) {
 
     const article = document.createElement("article");
 
@@ -64,7 +69,8 @@ projects.forEach(project => {
            rel="noopener noreferrer"
            class="project-image">
 
-            <img src="${project.image}" alt="${project.name} website">
+            <img src="${project.image}"
+                 alt="${project.name} website">
 
             <div class="project-overlay">
                 <span>VIEW SITE ↗</span>
@@ -75,5 +81,53 @@ projects.forEach(project => {
         <h3>${project.name}</h3>
     `;
 
+    return article;
+}
+
+
+// Show next 9 projects
+function loadProjects() {
+
+    const nextProjects = projects.slice(
+        visibleProjects,
+        visibleProjects + projectsPerLoad
+    );
+
+    nextProjects.forEach(project => {
+        projectsGrid.appendChild(createProject(project));
+    });
+
+    visibleProjects += nextProjects.length;
+
+    updateLoadMoreButton();
+}
+
+
+// Create Load More button
+const loadMoreButton = document.createElement("button");
+
+loadMoreButton.className = "load-more";
+loadMoreButton.textContent = "LOAD MORE";
+
+loadMoreButton.addEventListener("click", loadProjects);
+
+
+// Add button after project grid
+projectsGrid.parentNode.appendChild(loadMoreButton);
+
+
+// Hide button when everything is loaded
+function updateLoadMoreButton() {
+
+    if (visibleProjects >= projects.length) {
+        loadMoreButton.style.display = "none";
+    } else {
+        loadMoreButton.style.display = "inline-flex";
+    }
+}
+
+
+// Initial 9 projects
+loadProjects();
     projectsGrid.appendChild(article);
 });
