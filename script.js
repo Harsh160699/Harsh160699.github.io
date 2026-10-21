@@ -151,9 +151,7 @@ function updateLoadMoreButton() {
 
     if (visibleProjects >= projects.length) {
         loadMoreButton.style.display = "none";
-    } else {
-        loadMoreButton.style.display = "inline-flex";
-    }
+    } 
 }
 
 
