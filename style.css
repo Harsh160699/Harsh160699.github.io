@@ -526,3 +526,29 @@ footer p {
         padding: 25px;
     }
 }
+
+/* Load More CSS */
+
+.load-more {
+    display: flex;
+    margin: 60px auto 0;
+    padding: 13px 28px;
+
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.load-more:hover {
+    background: #fff;
+    color: #000;
+}
