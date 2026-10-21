@@ -47,7 +47,7 @@ const projects = [
         name: "Mark Hoerr Landscaping",
         image: "assets/images/mark-hoerr-landscaping.webp",
         url: "https://markhoerrlandscaping.com/"
-    }
+    },
     {
         name: "Central Illinois Construct",
         image: "assets/images/central-illinois-construct.webp",
