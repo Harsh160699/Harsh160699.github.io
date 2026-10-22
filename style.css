@@ -28,7 +28,6 @@ main {
     overflow: hidden;
 }
 
-
 /* ================================
    Navigation
 ================================ */
@@ -46,7 +45,6 @@ nav {
     max-width: 1150px;
     margin: auto;
     padding: 20px 30px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,7 +70,6 @@ nav {
 .nav-links a:hover {
     color: #a970ff;
 }
-
 
 /* ================================
    General Sections
@@ -104,18 +101,15 @@ section p {
     max-width: 760px;
 }
 
-
 /* ================================
    Hero
 ================================ */
 
 .hero {
     min-height: 90vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     padding-top: 120px;
     padding-bottom: 120px;
 }
@@ -181,7 +175,6 @@ section p {
     color: #a970ff;
 }
 
-
 /* ================================
    About
 ================================ */
@@ -194,7 +187,6 @@ section p {
     font-size: 17px;
     margin-bottom: 18px;
 }
-
 
 /* ================================
    Skills
@@ -216,7 +208,6 @@ section p {
     background: #121219;
     border: 1px solid #24242c;
     border-radius: 10px;
-
     transition: 0.3s ease;
 }
 
@@ -234,7 +225,6 @@ section p {
     font-size: 14px;
 }
 
-
 /* ================================
    Experience
 ================================ */
@@ -246,7 +236,6 @@ section p {
 .experience-item {
     margin-top: 45px;
     padding: 35px;
-
     background: #121219;
     border: 1px solid #24242c;
     border-radius: 10px;
@@ -283,7 +272,6 @@ section p {
     margin-bottom: 12px;
 }
 
-
 /* ================================
    Projects
 ================================ */
@@ -307,23 +295,23 @@ section p {
     position: relative;
     display: block;
     width: 100%;
-    height: 260px;
+    height: 320px;
     overflow: hidden;
     background: #151515;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
 }
 
 .project-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
-    object-fit: initial;
-    object-position: top;
+    object-fit: cover;
+    object-position: top center;
     transition: transform 0.5s ease;
 }
 
-/* Dark hover overlay */
+/* Project Hover Overlay */
 
 .project-overlay {
     position: absolute;
@@ -333,7 +321,7 @@ section p {
     justify-content: center;
     background: rgba(0, 0, 0, 0.55);
     opacity: 0;
-    transition: opacity 0.35s ease;
+    transition: opacity 0.3s ease;
 }
 
 .project-overlay span {
@@ -344,14 +332,15 @@ section p {
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1px;
+
     transform: translateY(10px);
-    transition: transform 0.35s ease;
+    transition: transform 0.3s ease;
 }
 
-/* Hover */
+/* Project Hover */
 
 .project-image:hover img {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .project-image:hover .project-overlay {
@@ -362,45 +351,14 @@ section p {
     transform: translateY(0);
 }
 
-/* Project name */
+/* Project Name */
 
 .project h3 {
     margin-top: 18px;
     margin-bottom: 0;
-
     font-size: 20px;
     font-weight: 500;
     letter-spacing: -0.3px;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 800px) {
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .project-image {
-        height: 400px;
-    }
-}
-
-
-@media (max-width: 500px) {
-
-    .project-image {
-        height: 300px;
-        border-radius: 10px;
-    }
-
-    .project h3 {
-        font-size: 18px;
-    }
 }
 
 /* ================================
@@ -425,12 +383,9 @@ section p {
 
 .contact-links a {
     padding: 10px 20px;
-
     border: 1px solid #383842;
     border-radius: 5px;
-
     font-size: 14px;
-
     transition: 0.3s ease;
 }
 
@@ -439,16 +394,13 @@ section p {
     color: #a970ff;
 }
 
-
 /* ================================
    Footer
 ================================ */
 
 footer {
     border-top: 1px solid #24242c;
-
     padding: 30px;
-
     text-align: center;
 }
 
@@ -457,9 +409,32 @@ footer p {
     font-size: 13px;
 }
 
+/* ================================
+   Load More
+================================ */
+
+.load-more {
+    display: flex;
+    margin: 60px auto 0;
+    padding: 13px 28px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.load-more:hover {
+    background: #fff;
+    color: #000;
+}
 
 /* ================================
-   Responsive
+   Tablet
 ================================ */
 
 @media (max-width: 900px) {
@@ -478,6 +453,9 @@ footer p {
     }
 }
 
+/* ================================
+   Mobile
+================================ */
 
 @media (max-width: 650px) {
 
@@ -495,6 +473,8 @@ footer p {
 
     .hero {
         min-height: 85vh;
+        padding-top: 90px;
+        padding-bottom: 90px;
     }
 
     .hero h1 {
@@ -511,6 +491,15 @@ footer p {
         grid-template-columns: 1fr;
     }
 
+    .project-image {
+        height: 300px;
+        border-radius: 8px;
+    }
+
+    .project h3 {
+        font-size: 18px;
+    }
+
     .experience-header {
         flex-direction: column;
         align-items: flex-start;
@@ -519,30 +508,8 @@ footer p {
     .experience-item {
         padding: 25px;
     }
-}
 
-/* Load More CSS */
-
-.load-more {
-    display: flex;
-    margin: 60px auto 0;
-    padding: 13px 28px;
-
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 50px;
-
-    color: #fff;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1px;
-
-    cursor: pointer;
-
-    transition: all 0.3s ease;
-}
-
-.load-more:hover {
-    background: #fff;
-    color: #000;
+    .load-more {
+        margin-top: 45px;
+    }
 }
