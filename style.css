@@ -288,9 +288,9 @@ section p {
    Projects
 ================================ */
 
-/* =========================
-   PROJECTS
-========================= */
+#projects {
+    border-top: 1px solid #24242c;
+}
 
 .projects-grid {
     display: grid;
@@ -328,28 +328,22 @@ section p {
 .project-overlay {
     position: absolute;
     inset: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: rgba(0, 0, 0, 0.55);
-
     opacity: 0;
     transition: opacity 0.35s ease;
 }
 
 .project-overlay span {
     padding: 12px 20px;
-
     border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 50px;
-
     color: #fff;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1px;
-
     transform: translateY(10px);
     transition: transform 0.35s ease;
 }
